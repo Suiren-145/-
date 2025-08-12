@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自己紹介</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+        #profile {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        #profile img {
+            width: 150px;
+            border-radius: 50%;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>自己紹介</h1>
+
+    <div id="profile">
+        <img src="profile.jpg" alt="プロフィール画像">
+        <h2>名前</h2>
+        <p>水蓮（すいれん）</p>
+        <p>沖縄県出身</p>
+        <button onclick="showMessage()">詳細</button>
+        <div id="message" style="display:none;">
+            <p>趣味　ゲーム。</p>
+        </div>
+    </div>
+
+    <script>
+        function showMessage() {
+            const message = document.getElementById("message");
+            if (message.style.display === "none") {
+                message.style.display = "block";
+            } else {
+                message.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
